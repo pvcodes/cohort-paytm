@@ -1,9 +1,8 @@
 const mongoose = require("mongoose");
-mongoose
-	.connect(
-		"mongodb+srv://pvcodes:Q7veGmgO5YFmof5t@cluster-piwallet.uknti.mongodb.net/paytm"
-	)
-	.then(() => console.log("DB Connected!"));
+
+const { MONGO_URL } = require("./config");
+
+mongoose.connect(MONGO_URL).then(() => console.log("DB Connected!"));
 
 const Schema = mongoose.Schema;
 

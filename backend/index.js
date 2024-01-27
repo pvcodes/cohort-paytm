@@ -3,11 +3,8 @@ const app = express();
 const mainRouter = require("./routes/index");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-const { JWT_TOKEN } = require("./config");
 
 const PORT = process.env.PORT || 5050;
-
-const { User } = require("./db");
 
 app.use(bodyParser.json());
 
